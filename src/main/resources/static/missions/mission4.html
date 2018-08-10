@@ -35,7 +35,16 @@
                     if (memberList.length === 0) {
                         tbody.append("<tr><td colspan='3'>N/A</td></tr>");
                     } else {
-                        
+                        $.each(memberList, function (i, member) {
+                            var tr = $(
+                                "<tr>"
+                                + "  <td>"+member.email+"</td>"
+                                + "  <td>"+member.name+"</td>"
+                                + "</tr>"
+                            );
+                            
+                            $(tbody).append(tr);
+                        });
                     }
                 }
             });
