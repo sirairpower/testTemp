@@ -29,3 +29,6 @@ function ajax(config) {
 function prettyJSON(data) {
     return JSON.stringify(data, undefined, 4);
 }
+function randomNum(min, max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
