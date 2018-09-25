@@ -27,33 +27,6 @@
                         }
                     });
                 });
-                $("#btn1").click(function() {
-
-                    var interestList = [];
-                    $("#interestContainer .btnInterest").each(function(i, btn) {
-                        interestList.push({
-                            "key" : $(btn).attr("data-key"), 
-                            "isChecked" : $(btn).hasClass("checked")
-                        });
-                    });
-
-                    ajax({
-                        url : "/mission8/saveInterest", 
-                        method : "POST", 
-                        data : {
-                            json : JSON.stringify(interestList)
-                        }, 
-                        success : function(data) {
-                            $("#response2").text(prettyJSON(data));
-                            if (data.success === true) {
-                                reload();
-                            }
-                        }
-                    });
-                });
-
-                initInterestTable();
-                reload();
             });
         </script>
     </head>
