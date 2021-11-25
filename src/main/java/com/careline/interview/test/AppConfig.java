@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class AppConfig {
 
 
-    
+
     // <editor-fold desc="Getters & Setters" defaultstate="collapsed">
     // </editor-fold>
 }
