@@ -1,18 +1,20 @@
 package com.careline.interview.test.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
 
 public class Member implements Serializable {
 
   private static final long serialVersionUID = 1L;
-
+  @JsonProperty(value = "memberId")
   private String id;
 
   private String email;
-
+  @JsonIgnore
   private String password;
-
+  @JsonProperty(value = "name")
   private String nickname;
 
   public void setId(String id) {

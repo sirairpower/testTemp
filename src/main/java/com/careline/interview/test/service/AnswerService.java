@@ -22,6 +22,11 @@ public class AnswerService {
   @Autowired
   private MemberDAO memberDAO;
 
+  //mission4
+  public List<Member> listAllMember(){
+    return memberDAO.findAll();
+  }
+
   //mission3
   public void register(Member member) throws Exception {
     memberDAO.save(member);
