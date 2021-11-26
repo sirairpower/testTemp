@@ -1,5 +1,7 @@
 package com.careline.interview.test.service;
 
+import com.careline.interview.test.dao.MemberDAO;
+import com.careline.interview.test.model.Member;
 import com.careline.interview.test.model.input.ComputeIn;
 import com.careline.interview.test.model.output.ComputeOut;
 import com.careline.interview.test.utils.ProjectCalcUtils;
@@ -10,13 +12,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AnswerService {
 
   private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
+  @Autowired
+  private MemberDAO memberDAO;
+
+  //mission3
+  public void register(Member member) throws Exception {
+    memberDAO.save(member);
+  }
 
   //mission2
   public ComputeOut dealWithCompute(ComputeIn computeIn) {

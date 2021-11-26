@@ -4,14 +4,14 @@
         <title>任務3 - 會員註冊</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/common.css" rel="stylesheet">
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="/js/common.js"></script>
-        
+
         <script type="text/javascript">
             $(function() {
 
@@ -19,10 +19,10 @@
 
                     ajax({
                         url : "/mission3/register",
-                        method : "POST", 
-                        data : new FormData($("#dataForm")[0]), 
+                        method : "POST",
+                        data : new FormData($("#dataForm")[0]),
                         processData: false,
-                        contentType: false, 
+                        contentType: false,
                         success : function(data) {
                             $("#response").text(prettyJSON(data));
                         }
@@ -62,7 +62,7 @@
                                 </tr>
                                 <tr>
                                     <th>會員稱呼</th>
-                                    <td><input type="text" name="name" /></td>
+                                    <td><input type="text" name="nickname"/></td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -76,7 +76,7 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     Server 回傳
